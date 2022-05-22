@@ -24,3 +24,8 @@ jobs:
         cache: maven
     - name: Build with Maven
       run: mvn -B package --file pom.xml
+    - name: Upload artifact
+      uses: actions/upload-artifact@master
+      with:
+        name: java-sample1
+        path: target/java-sample-1.jar
