@@ -38,4 +38,4 @@ jobs:
         name: java-sample1
         path: .
     - name: run app
-      run: file java-sample1
+      run: ls -lah
