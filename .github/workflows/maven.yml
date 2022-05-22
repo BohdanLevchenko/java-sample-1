@@ -11,9 +11,7 @@ on:
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
-
     steps:
     - uses: actions/checkout@v3
     - name: Set up JDK 17
@@ -29,3 +27,15 @@ jobs:
       with:
         name: java-sample1
         path: target/java-sample-1.jar
+
+  run:
+    runs-on: ubuntu-latest
+    container:
+      image: eclipse-temurin:17.0.3_7-jre-nanoserver
+    steps:
+      - uses: actions/download-artifact@master
+        with:
+          name: java-sample1
+          path: .
+      - name: run
+      - run: java -jar java-sample1.jar
