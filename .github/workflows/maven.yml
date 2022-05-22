@@ -37,4 +37,4 @@ jobs:
         name: java-sample1
         path: .
     - name: run app
-    - run: java -jar java-sample1.jar
+      run: java -jar java-sample1.jar
