@@ -31,7 +31,7 @@ jobs:
     runs-on: ubuntu-latest
     needs: [build]
     container:
-      image: eclipse-temurin:17.0.3_7-jre-nanoserver
+      image: eclipse-temurin:17.0.3_7-jdk
     steps:
     - uses: actions/download-artifact@master
       with:
